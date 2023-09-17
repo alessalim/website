@@ -189,6 +189,9 @@ footer {
     left: 20px; 
     z-index: 2; 
 }
+#hidden-info {
+    display: none;
+}
     </style>
 </head>
 <body>
@@ -402,21 +405,22 @@ footer {
 </script>
 
 <script>
-    const showButton = document.getElementById('show-button');
-    const hiddenInfo = document.getElementById('hidden-info');
+   const showButton = document.getElementById('show-button');
+const hiddenInfo = document.getElementById('hidden-info');
 
-    showButton.addEventListener('click', (event) => {
-        event.preventDefault(); 
+showButton.addEventListener('click', (event) => {
+    event.preventDefault();
 
-        if (hiddenInfo.style.display === 'none') {
-            hiddenInfo.style.display = 'block'; 
-            showButton.textContent = 'Hide Information'; 
-        } else {
-            hiddenInfo.style.display = 'none'; 
-            showButton.textContent = 'See more >'; 
-        }
-    });
+    if (hiddenInfo.style.display === 'none' || hiddenInfo.style.display === '') {
+        hiddenInfo.style.display = 'block';
+        showButton.textContent = 'Hide Information';
+    } else {
+        hiddenInfo.style.display = 'none';
+        showButton.textContent = 'See more >';
+    }
+});
 </script>
+
 
     <footer>
         <img src="../Images/footer image.png" width="200">

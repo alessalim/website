@@ -30,17 +30,18 @@ const recipeButtons = document.querySelectorAll(".btn");
 
 
         
+
         const showButton = document.getElementById('show-button');
-    const hiddenInfo = document.getElementById('hidden-info');
-
-    showButton.addEventListener('click', (event) => {
-        event.preventDefault(); 
-
-        if (hiddenInfo.style.display === 'none') {
-            hiddenInfo.style.display = 'block'; 
-            showButton.textContent = 'Hide Information'; 
-        } else {
-            hiddenInfo.style.display = 'none'; 
-            showButton.textContent = 'See more >'; 
-        }
-    });
+        const hiddenInfo = document.getElementById('hidden-info');
+        
+        showButton.addEventListener('click', (event) => {
+            event.preventDefault();
+        
+            if (hiddenInfo.style.display === 'none' || hiddenInfo.style.display === '') {
+                hiddenInfo.style.display = 'block';
+                showButton.textContent = 'Hide Information';
+            } else {
+                hiddenInfo.style.display = 'none';
+                showButton.textContent = 'See more >';
+            }
+        });
