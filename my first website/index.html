@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="../Images/food logo.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Eats</title>
+    <style>
+    body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 40px 0px;
+    text-align: center;
+    margin: 0;
+    background-image: url("../Images/background\ food.avif");
+
+}
+
+header h1 {
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-style:inherit;
+    font-size: 70px;
+    font-display:unset;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+section {
+    padding: 20px;
+}
+
+.featured-recipe h2,
+.recent-recipes h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexcontainer1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.recipe-card {
+    flex: 1;
+    max-width: 400px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.recipe-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.recipe-card h3 {
+    margin: 10px 0;
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: #1F253F;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+
+.btn2 {
+    display: inline-block;
+    background-color: rgba(224, 224, 224, 0.798);
+    color: black;
+    padding: 8px 20px;
+    border-radius: 3px;
+    text-decoration: none;  
+    margin: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1F253F;
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.white-button {
+    background-color: #fff;
+    color: #1F253F; 
+}
+
+.popup-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-close {
+    cursor: pointer;
+    color: #555;
+    font-weight: bold;
+}
+
+.popup-image {
+    max-width: 100%; 
+}
+#logo {
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    z-index: 2; 
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../Images/food logo.jpg" alt="Simple Eats Logo" id="logo" width="40px">
+        <h1>Simple Eats</h1>
+
+        <nav>
+    
+            <ul>
+                <li class="dropdown">
+                    <a href="index.html" class="dropbtn">HOME</a>
+                    <div class="dropdown-content">
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">RECIPES</a>
+                    <div class="dropdown-content">
+                        <a href="#">Breakfast</a>
+                        <a href="#">Lunch</a>
+                        <a href="#">Dinner</a>
+
+                    </div>
+                </li>
+            
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">HOLIDAYS</a>
+                    <div class="dropdown-content">
+                        <a href="#">Birthdays</a>
+                        <a href="#">Christmas</a>
+                        <a href="#">Easter</a>
+                        <a href="#">Thanksgiving</a>
+                        <a href="#">Halloween</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">ABOUT US</a>
+                    <div class="dropdown-content">
+                        <a href="references.html">References</a>
+                        <a href="#">Meet the teem</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+</head>
+<body>
+    <div class="popup-container" id="popup">
+        <div class="popup-content">
+            <img src="../Images/ad.png" alt="Popup Ad Image" class="popup-image">
+
+            <p><span class="popup-close" id="close-popup">Close</span></p>
+        </div>
+    </div>
+
+
+</div>
+
+    <section class="featured-recipe">
+        <h2>Featured Recipes</h2>
+        <div class="flex-container">
+            <div class="recipe-card">
+                <!-- Has webpage linked -->
+                <img src="../Images/carbonara.jpg" alt="Featured Recipe" width="250">
+                <h3>Delicious Pasta Carbonara</h3>
+                <p>A creamy Italian classic that's quick and easy to make.</p>
+               <br>
+                <a href="pasta.html" class="btn">Get the Recipe</a>
+            </div>
+            <div class="recipe-card">
+                <img src="../Images/burger.jpg" alt="Featured Recipe" width="250">
+                <h3>The Perfect Cheese Burger</h3>
+                <p>Cheese burger rich of flavour.</p>
+               <br>
+               <br>
+                <a href="#" class="btn">Get the Recipe</a>
+            </div>
+            <div class="recipe-card">
+                <img src="../Images/nacho1.jpg" alt="Featured Recipe" width="250">
+                <h3>The Ultimate Nachos</h3>
+                <p>Quick, easy and fun nacho recipe.</p>
+               <br><br>
+                <a href="#" class="btn">Get the Recipe</a>
+            </div>
+        </divc>
+    </section>
+
+    <section class="featured-recipe">
+        <h2>Recent Recipes</h2>
+        <div class="flex-container">
+            <div class="recipe-card">
+                <!-- Has webpage linked -->
+                <img src="../Images/chocolate brownies.jpg" alt="Featured Recipe" width="250">
+                <h3>Chocolate Brownie</h3>
+                <p>Perfect for chocolate lovers.</p> <br>
+               <br>
+                <a href="brownie.html" class="btn">Get the Recipe</a>
+            </div>
+            <div class="recipe-card">
+                <img src="../Images/teacake.jpg" alt="Featured Recipe" width="250">
+                <h3>Apple Custard Teacakes</h3>
+                <p>Sweet and scrumptious.</p>
+               <br> <br>
+                <a href="#" class="btn">Get the Recipe</a>
+            </div>
+            <div class="recipe-card">
+                <img src="../Images/carbonara.jpg" alt="Featured Recipe" width="250">
+                <h3>Delicious Pasta Carbonara</h3>
+                <p>A creamy Italian classic that's quick and easy to make.</p>
+               <br>
+                <a href="#" class="btn">Get the Recipe</a>
+            </div>
+        </divc>
+    </section>
+
+    <section class="featured-recipe">
+        <div class="flex-container">
+            <div class="recipe-card">
+                <!-- Has webpage linked -->
+                <img src="../Images/homemade pizza.jpg" alt="Featured Recipe" width="250">
+                <h3>The Best Homemade Pizza</h3>
+                <p>Delicious full the best combination of ingredients.</p>
+        
+                <br>
+                <a href="pizza.html" class="btn">Get the Recipe</a>
+            </div>
+            <div class="recipe-card">
+                <img src="../Images/curry.jpg" alt="Featured Recipe" width="250">
+                <h3>Indian Chicken Curry</h3>
+                <p>Creamy Indian curry rich with unbeatable flavour.</p>
+               <br>
+                <a href="#" class="btn">Get the Recipe</a>
+            </div>
+            <div class="recipe-card">
+                <img src="../Images/korean.jpg" alt="Featured Recipe" width="250">
+                <h3>Hot and spicy rice cake</h3>
+                <p>Chewy rice cakes cooked in a red, spicy broth.</p>
+               <br>
+                <a href="#" class="btn">Get the Recipe</a>
+            </div>
+        </divc>
+    </section>
+
+
+                <!-- Press to see hidden information -->
+    <a href="#" class="btn2" id="show-button">See more ></a>
+    <div id="hidden-info">
+        <p>
+            <section class="featured-recipe">
+                <div class="flex-container">
+                    <div class="recipe-card">
+                        <img src="../Images/lasagna.jpg" alt="Featured Recipe" width="250">
+                        <h3>Perfect Lasagna</h3>
+                        <p>Cheesy and creamy combination.</p>
+                        <br>
+                       <br>
+                        <a href="pizza.html" class="btn">Get the Recipe</a>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="../Images/rice.jpg" alt="Featured Recipe" width="250">
+                        <h3>Chinese fried rice</h3>
+                        <p>Unbeatable and original fried rice.</p> <br>
+                       <br>
+                        <a href="#" class="btn">Get the Recipe</a>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="../Images/mochi.jpg" alt="Featured Recipe" width="250">
+                        <h3>Japanese Mochi</h3> <br>
+                        <p>Trending, sweet and chewy mochi.</p>
+                       <br><br>
+                        <a href="#" class="btn">Get the Recipe</a>
+                    </div>
+                </divc>
+            </section>
+
+        </p>
+    </div>
+  
+    
+
+        <script> 
+        const recipeButtons = document.querySelectorAll(".btn");
+            recipeButtons.forEach(button => {
+                button.addEventListener("mouseover", function() {
+                    button.style.backgroundColor = "white";
+                    button.style.color = "black";
+                });
+
+                button.addEventListener("mouseout", function() {
+                    button.style.backgroundColor = "#1F253F"; 
+                    button.style.color = "#fff"; 
+                });
+            });
+        </script>
+   
+   <script>
+    const popup = document.getElementById('popup');
+    const closePopup = document.getElementById('close-popup');
+
+    function showPopup() {
+        popup.style.transform = 'translateX(0)';
+    }
+    function hidePopup() {
+        popup.style.transform = 'translateX(100%)';
+    }
+
+    window.addEventListener('load', showPopup);
+
+    closePopup.addEventListener('click', hidePopup);
+</script>
+
+<script>
+    const showButton = document.getElementById('show-button');
+    const hiddenInfo = document.getElementById('hidden-info');
+
+    showButton.addEventListener('click', (event) => {
+        event.preventDefault(); 
+
+        if (hiddenInfo.style.display === 'none') {
+            hiddenInfo.style.display = 'block'; 
+            showButton.textContent = 'Hide Information'; 
+        } else {
+            hiddenInfo.style.display = 'none'; 
+            showButton.textContent = 'See more >'; 
+        }
+    });
+</script>
+
+    <footer>
+        <img src="../Images/footer image.png" width="200">
+        <br>
+        <p>Copyright &copy; 2023 Simple Eats
+        </p>
+
+        
+    </footer>
+</body>
+</html>

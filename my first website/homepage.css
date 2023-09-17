@@ -1,0 +1,182 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 40px 0px;
+    text-align: center;
+    margin: 0;
+    background-image: url("../Images/background\ food.avif");
+
+}
+
+header h1 {
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-style:inherit;
+    font-size: 70px;
+    font-display:unset;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+section {
+    padding: 20px;
+}
+
+.featured-recipe h2,
+.recent-recipes h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexcontainer1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.recipe-card {
+    flex: 1;
+    max-width: 400px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.recipe-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.recipe-card h3 {
+    margin: 10px 0;
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: #1F253F;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+
+.btn2 {
+    display: inline-block;
+    background-color: rgba(224, 224, 224, 0.798);
+    color: black;
+    padding: 8px 20px;
+    border-radius: 3px;
+    text-decoration: none;  
+    margin: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1F253F;
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.white-button {
+    background-color: #fff;
+    color: #1F253F; 
+}
+
+.popup-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-close {
+    cursor: pointer;
+    color: #555;
+    font-weight: bold;
+}
+
+.popup-image {
+    max-width: 100%; 
+}
+#logo {
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    z-index: 2; 
+}
